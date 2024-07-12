@@ -2,7 +2,7 @@ from flask import Flask, request, render_template, redirect, url_for, flash, ses
 from flask_sqlalchemy import SQLAlchemy
 from werkzeug.security import generate_password_hash, check_password_hash
 from db import db       
-from flask_migrate import Migrate
+
 
 
 
@@ -10,11 +10,11 @@ from flask_migrate import Migrate
 app = Flask(__name__)
 #mi coneccion con PSQL
 app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql+psycopg2://postgres:password@localhost:5433/sitioweb'
-app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = True
+app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 db.init_app(app)
 app.secret_key = "mysecretkey"
 
-migrate = Migrate
+
 
 from login import login_controller
 from productos import producto_controller
