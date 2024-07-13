@@ -5,4 +5,4 @@ from modulos.productos import Producto
 @app.route('/productos')
 def productos():
     return render_template('productosInicial.html') 
-
+    

@@ -9,7 +9,3 @@ class Usuarios (db.Model):
     password = db.Column(db.String(255), nullable=False)
 
 
-
-
-
-

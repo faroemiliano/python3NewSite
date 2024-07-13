@@ -1,8 +1,6 @@
 from app import  db
 from modulos.productos import Producto
 
-
-
 def agregar_producto():
     # Crear un nuevo producto manualmente
     nuevo_producto = Producto(

@@ -4,11 +4,6 @@ from werkzeug.security import generate_password_hash, check_password_hash
 from modulos.usuarios import Usuarios
 from app import db
 
-
-
-
-
-
 @app.route('/registro', methods=['POST', 'GET'])
 def registro():    
     if request.method == 'POST':
