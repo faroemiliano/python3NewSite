@@ -1,7 +1,7 @@
 from __main__ import app
 from flask import Flask, request, render_template, redirect, url_for, flash, session
 from werkzeug.security import generate_password_hash, check_password_hash
-from modulos.usuarios import Usuarios
+from modules.users.model import Usuarios
 from app import db
 
 @app.route('/registro', methods=['POST', 'GET'])
